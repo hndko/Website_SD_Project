@@ -23,15 +23,12 @@ checkAdminLogin();
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="gallery">Kelola Galeri</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="messages">Kelola Pesan</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="auth/logout.php">Logout</a>
+                        <a class="nav-link" href="../auth/logout.php">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -44,18 +41,9 @@ checkAdminLogin();
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <h5>Galeri</h5>
-                        <p>Kelola foto-foto galeri sekolah</p>
-                        <a href="gallery.php" class="btn btn-primary">Kelola Galeri</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
                         <h5>Pesan</h5>
                         <p>Lihat dan kelola pesan masuk</p>
-                        <a href="messages.php" class="btn btn-primary">Kelola Pesan</a>
+                        <a href="messages" class="btn btn-primary">Kelola Pesan</a>
                     </div>
                 </div>
             </div>

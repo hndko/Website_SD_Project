@@ -1,10 +1,10 @@
 <?php
 // admin/messages.php
-require_once '../config.php';
+require_once '../../config/config.php';
 checkAdminLogin();
 
 $conn = connectDB();
-$result = $conn->query("SELECT * FROM messages ORDER BY created_at DESC");
+$result = $conn->query("SELECT * FROM `messages` ORDER BY `created_at` DESC");
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -17,7 +17,27 @@ $result = $conn->query("SELECT * FROM messages ORDER BY created_at DESC");
 </head>
 
 <body>
-    <!-- Include navbar from dashboard -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../dashboard.php">Admin Panel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="messages">Kelola Pesan</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../auth/logout.php">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container py-4">
         <h2>Kelola Pesan</h2>
 
