@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD Cendekia | Galeri</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .feature-card {
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (sama seperti index.html, dengan active di Galeri) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">SD Cendekia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fasilitas.html">Fasilitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="galeri.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Galeri Content -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Galeri Kegiatan</h2>
+            <div class="row g-4" id="galeriKegiatan">
+                <!-- Akan diisi oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (sama seperti index.html) -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>SD Cendekia</h5>
+                    <p>Membentuk generasi cerdas, kreatif, dan berakhlak mulia.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Ikuti Kami</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3">Facebook</a>
+                        <a href="#" class="text-light me-3">Instagram</a>
+                        <a href="#" class="text-light">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 SD Cendekia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Galeri Kegiatan
+        const galeriItems = [
+            { title: 'Upacara Bendera', image: 'https://karangtengah.bantulkab.go.id/assets/files/artikel/sedang_1580190787IMG-20200127-WA0078.jpg' },
+            { title: 'Kegiatan Olahraga', image: 'https://awsimages.detik.net.id/community/media/visual/2022/01/04/siswa-sd-negeri-kebon-jeruk-01-dan-08-sudah-bisa-penjas-di-lapangan-saat-sekolah-tatap-muka-2.jpeg?w=600&q=90' },
+            { title: 'Pembelajaran di Kelas', image: 'https://www.tanjungpinangkota.go.id/images/berita/small/BELAJAR%20%20RES.jpg' },
+            { title: 'Kegiatan Ekstrakurikuler', image: 'https://santamaria.sch.id/wp-content/uploads/2020/02/Picture1-1.png' },
+            { title: 'Lomba Akademik', image: 'https://smamandaelu.com/asset/foto_berita/IMG_4988.JPG' },
+            { title: 'Pentas Seni', image: 'https://roesminnurjadin.tni-au.mil.id/wp-content/uploads/2023/03/IMG-20230304-WA0016.jpg' }
+        ];
+
+        const galeriContainer = document.getElementById('galeriKegiatan');
+        galeriItems.forEach(item => {
+            const col = document.createElement('div');
+            col.className = 'col-md-4';
+            col.innerHTML = `
+            <div class="card feature-card h-100">
+                <img src="${item.image}" class="card-img-top" alt="${item.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${item.title}</h5>
+                </div>
+            </div>
+        `;
+            galeriContainer.appendChild(col);
+        });
+    </script>
+</body>
+
+</html>
