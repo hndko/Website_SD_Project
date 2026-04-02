@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Admin Login | SD Cendekia</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?php echo $base_url ?? ''; ?>favicon.ico">
+    <link rel="icon" type="image/x-icon" href="<?php echo $base_url ?? ''; ?>assets/favicon.ico">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

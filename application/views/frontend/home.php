@@ -1,8 +1,8 @@
 <?php
 $pageTitle = "Beranda";
 $currentPage = "index";
-include 'application/views/layout/header.php';
-include 'application/views/layout/navbar.php';
+include 'application/views/layout/frontend/header.php';
+include 'application/views/layout/frontend/navbar.php';
 ?>
 
 <!-- Hero Section -->
@@ -117,4 +117,4 @@ include 'application/views/layout/navbar.php';
     </div>
 </section>
 
-<?php include 'application/views/layout/footer.php'; ?>
+<?php include 'application/views/layout/frontend/footer.php'; ?>
