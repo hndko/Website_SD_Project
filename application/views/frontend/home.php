@@ -6,7 +6,7 @@ include 'application/views/layout/frontend/navbar.php';
 ?>
 
 <!-- Hero Section -->
-<section class="hero-premium d-flex align-items-center" style="background-image: url('https://i.pinimg.com/originals/e0/c8/5a/e0c85ab2f97469148c9d017b23c33799.jpg');">
+<section class="hero-premium d-flex align-items-center" style="background-image: url('<?php echo $base_url; ?>assets/img/school_profile.png');">
     <div class="container hero-content text-center text-lg-start">
         <div class="row align-items-center">
             <div class="col-lg-7">
@@ -69,7 +69,7 @@ include 'application/views/layout/frontend/navbar.php';
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
                 <div class="position-relative">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" class="img-fluid rounded-4 shadow-lg" alt="SD Cendekia">
+                    <img src="<?php echo $base_url; ?>assets/img/classroom.png" class="img-fluid rounded-4 shadow-lg" alt="SD Cendekia">
                     <div class="position-absolute bottom-0 end-0 bg-primary p-4 rounded-4 shadow-lg translate-middle-y me-4 d-none d-sm-block">
                         <div class="text-white text-center">
                             <h2 class="fw-bold mb-0">15+</h2>

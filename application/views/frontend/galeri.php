@@ -20,7 +20,7 @@ include 'application/views/layout/frontend/navbar.php';
             <!-- Galeri 1 -->
             <div class="col-md-4">
                 <div class="gallery-item shadow-sm h-100">
-                    <img src="https://images.unsplash.com/photo-1577891729319-f48bf3469a5e?q=80&w=600&h=600&auto=format&fit=crop" class="img-fluid w-100" alt="Upacara">
+                    <img src="<?php echo $base_url; ?>assets/img/flag_ceremony.png" class="img-fluid w-100" alt="Upacara">
                     <div class="gallery-overlay">
                         <div class="text-white text-center p-3">
                             <h5 class="fw-bold mb-1">Upacara Bendera</h5>
@@ -32,7 +32,7 @@ include 'application/views/layout/frontend/navbar.php';
             <!-- Galeri 2 -->
             <div class="col-md-4">
                 <div class="gallery-item shadow-sm h-100">
-                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?q=80&w=600&h=600&auto=format&fit=crop" class="img-fluid w-100" alt="Pentas Seni">
+                    <img src="<?php echo $base_url; ?>assets/img/art_class.png" class="img-fluid w-100" alt="Pentas Seni">
                     <div class="gallery-overlay">
                         <div class="text-white text-center p-3">
                             <h5 class="fw-bold mb-1">Pentas Seni Tahunan</h5>
@@ -44,7 +44,7 @@ include 'application/views/layout/frontend/navbar.php';
             <!-- Galeri 3 -->
             <div class="col-md-4">
                 <div class="gallery-item shadow-sm h-100">
-                    <img src="https://images.unsplash.com/photo-1524391202494-3eb574187ac0?q=80&w=600&h=600&auto=format&fit=crop" class="img-fluid w-100" alt="Lomba">
+                    <img src="<?php echo $base_url; ?>assets/img/coloring.png" class="img-fluid w-100" alt="Lomba">
                     <div class="gallery-overlay">
                         <div class="text-white text-center p-3">
                             <h5 class="fw-bold mb-1">Lomba Mewarnai</h5>
@@ -56,7 +56,7 @@ include 'application/views/layout/frontend/navbar.php';
             <!-- Galeri 4 -->
             <div class="col-md-4">
                 <div class="gallery-item shadow-sm h-100">
-                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=600&h=600&auto=format&fit=crop" class="img-fluid w-100" alt="Kunjungan">
+                    <img src="<?php echo $base_url; ?>assets/img/education_trip.png" class="img-fluid w-100" alt="Kunjungan">
                     <div class="gallery-overlay">
                         <div class="text-white text-center p-3">
                             <h5 class="fw-bold mb-1">Kunjungan Edukatif</h5>
@@ -68,7 +68,7 @@ include 'application/views/layout/frontend/navbar.php';
             <!-- Galeri 5 -->
             <div class="col-md-4">
                 <div class="gallery-item shadow-sm h-100">
-                    <img src="https://images.unsplash.com/photo-1526721940322-1fbc3d3f966c?q=80&w=600&h=600&auto=format&fit=crop" class="img-fluid w-100" alt="Olahraga">
+                    <img src="<?php echo $base_url; ?>assets/img/sports_day.png" class="img-fluid w-100" alt="Olahraga">
                     <div class="gallery-overlay">
                         <div class="text-white text-center p-3">
                             <h5 class="fw-bold mb-1">Hari Olahraga Sekolah</h5>
@@ -80,7 +80,7 @@ include 'application/views/layout/frontend/navbar.php';
             <!-- Galeri 6 -->
             <div class="col-md-4">
                 <div class="gallery-item shadow-sm h-100">
-                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600&h=600&auto=format&fit=crop" class="img-fluid w-100" alt="Belajar">
+                    <img src="<?php echo $base_url; ?>assets/img/classroom.png" class="img-fluid w-100" alt="Belajar">
                     <div class="gallery-overlay">
                         <div class="text-white text-center p-3">
                             <h5 class="fw-bold mb-1">Suasana Pembelajaran</h5>

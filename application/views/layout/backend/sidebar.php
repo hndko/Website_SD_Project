@@ -6,13 +6,13 @@
 
     <ul class="sidebar-nav">
         <li class="sidebar-nav-item">
-            <a href="<?php echo $base_url ?? ''; ?>admin" class="sidebar-nav-link <?php echo ($currentPage == 'dashboard') ? 'active' : ''; ?>">
+            <a href="<?php echo $base_url ?? ''; ?>dashboard" class="sidebar-nav-link <?php echo ($currentPage == 'dashboard') ? 'active' : ''; ?>">
                 <i data-lucide="layout-dashboard"></i>
                 <span>Dashboard</span>
             </a>
         </li>
         <li class="sidebar-nav-item">
-            <a href="<?php echo $base_url ?? ''; ?>admin/messages" class="sidebar-nav-link <?php echo ($currentPage == 'messages') ? 'active' : ''; ?>">
+            <a href="<?php echo $base_url ?? ''; ?>messages" class="sidebar-nav-link <?php echo ($currentPage == 'messages') ? 'active' : ''; ?>">
                 <i data-lucide="mail"></i>
                 <span>Inbox Pesan</span>
                 <?php if (isset($unreadCount) && $unreadCount > 0): ?>
@@ -21,7 +21,7 @@
             </a>
         </li>
         <li class="sidebar-nav-item">
-            <a href="<?php echo $base_url ?? ''; ?>admin/profile" class="sidebar-nav-link <?php echo ($currentPage == 'profile') ? 'active' : ''; ?>">
+            <a href="<?php echo $base_url ?? ''; ?>profile" class="sidebar-nav-link <?php echo ($currentPage == 'profile') ? 'active' : ''; ?>">
                 <i data-lucide="info"></i>
                 <span>Profil Sekolah</span>
             </a>

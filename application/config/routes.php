@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Route Configuration
  * Map URI paths to view/controller files
@@ -12,11 +11,12 @@ $routes = [
     'galeri' => 'frontend/galeri.php',
     'kontak' => 'frontend/kontak.php',
     'login' => 'auth/login.php',
-    'admin' => 'backend/dashboard.php',
-    'admin/dashboard' => 'backend/dashboard.php',
-    'admin/messages' => 'backend/messages.php',
-    'admin/profile' => 'backend/profile_edit.php',
-
+    
+    // Backend Routes (Simplified)
+    'dashboard' => 'backend/dashboard/index.php',
+    'messages' => 'backend/messages/index.php',
+    'profile' => 'backend/profile/index.php',
+    
     // Controllers / Actions
     'contact/submit' => 'controllers/Contact.php',
     'logout' => 'controllers/Logout.php'

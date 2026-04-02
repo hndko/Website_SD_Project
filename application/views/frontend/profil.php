@@ -23,7 +23,7 @@ include 'application/views/layout/frontend/navbar.php';
     <div class="container py-5">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=1200&auto=format&fit=crop" class="img-fluid rounded-4 shadow-lg mb-4 mb-lg-0" alt="History">
+                <img src="<?php echo $base_url; ?>assets/img/school_profile.png" class="img-fluid rounded-4 shadow-lg mb-4 mb-lg-0" alt="History">
             </div>
             <div class="col-lg-6">
                 <h2 class="fw-bold mb-4">Sejarah Berdiri</h2>

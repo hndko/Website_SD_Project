@@ -21,7 +21,7 @@ include 'application/views/layout/frontend/navbar.php';
             <div class="col-md-6 col-lg-4">
                 <div class="card card-modern h-100 p-4 border-0">
                     <div class="mb-4">
-                        <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dee7b?q=80&w=1200&auto=format&fit=crop" class="img-fluid rounded-4 shadow-sm" alt="Ruang Kelas">
+                        <img src="<?php echo $base_url; ?>assets/img/classroom.png" class="img-fluid rounded-4 shadow-sm" alt="Ruang Kelas">
                     </div>
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <div class="bg-primary bg-opacity-10 p-2 rounded-3 text-primary">
@@ -36,7 +36,7 @@ include 'application/views/layout/frontend/navbar.php';
             <div class="col-md-6 col-lg-4">
                 <div class="card card-modern h-100 p-4 border-0">
                     <div class="mb-4">
-                        <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=1200&auto=format&fit=crop" class="img-fluid rounded-4 shadow-sm" alt="Lab Komputer">
+                        <img src="<?php echo $base_url; ?>assets/img/computer_lab.png" class="img-fluid rounded-4 shadow-sm" alt="Lab Komputer">
                     </div>
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <div class="bg-primary bg-opacity-10 p-2 rounded-3 text-primary">
@@ -51,7 +51,7 @@ include 'application/views/layout/frontend/navbar.php';
             <div class="col-md-6 col-lg-4">
                 <div class="card card-modern h-100 p-4 border-0">
                     <div class="mb-4">
-                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop" class="img-fluid rounded-4 shadow-sm" alt="Perpustakaan">
+                        <img src="<?php echo $base_url; ?>assets/img/library.png" class="img-fluid rounded-4 shadow-sm" alt="Perpustakaan">
                     </div>
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <div class="bg-primary bg-opacity-10 p-2 rounded-3 text-primary">
@@ -66,7 +66,7 @@ include 'application/views/layout/frontend/navbar.php';
             <div class="col-md-6 col-lg-4">
                 <div class="card card-modern h-100 p-4 border-0">
                     <div class="mb-4">
-                        <img src="https://images.unsplash.com/photo-1505232987213-96d13a921d28?q=80&w=1200&auto=format&fit=crop" class="img-fluid rounded-4 shadow-sm" alt="Lapanan Olahraga">
+                        <img src="<?php echo $base_url; ?>assets/img/sports_day.png" class="img-fluid rounded-4 shadow-sm" alt="Lapanan Olahraga">
                     </div>
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <div class="bg-primary bg-opacity-10 p-2 rounded-3 text-primary">
@@ -81,7 +81,7 @@ include 'application/views/layout/frontend/navbar.php';
             <div class="col-md-6 col-lg-4">
                 <div class="card card-modern h-100 p-4 border-0">
                     <div class="mb-4">
-                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop" class="img-fluid rounded-4 shadow-sm" alt="Laboratorium IPA">
+                        <img src="<?php echo $base_url; ?>assets/img/science_lab.png" class="img-fluid rounded-4 shadow-sm" alt="Laboratorium IPA">
                     </div>
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <div class="bg-primary bg-opacity-10 p-2 rounded-3 text-primary">
@@ -96,7 +96,7 @@ include 'application/views/layout/frontend/navbar.php';
             <div class="col-md-6 col-lg-4">
                 <div class="card card-modern h-100 p-4 border-0">
                     <div class="mb-4">
-                        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?q=80&w=1200&auto=format&fit=crop" class="img-fluid rounded-4 shadow-sm" alt="Kantin Sehat">
+                        <img src="<?php echo $base_url; ?>assets/img/canteen.png" class="img-fluid rounded-4 shadow-sm" alt="Kantin Sehat">
                     </div>
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <div class="bg-primary bg-opacity-10 p-2 rounded-3 text-primary">
