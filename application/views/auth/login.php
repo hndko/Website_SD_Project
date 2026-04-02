@@ -1,6 +1,6 @@
 <?php
 // login.php
-require_once '../application/config/database.php';
+// login.php logic is handled via index.php router context
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($row = $result->fetch_assoc()) {
         if (password_verify($password, $row['password'])) {
             $_SESSION['admin_id'] = $row['id'];
-            header("Location: ../admin/dashboard.php");
+            header("Location: " . ($base_url ?? '') . "admin");
             exit();
         }
     }
@@ -29,18 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login | SD Cendekia</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?php echo $base_url ?? ''; ?>assets/favicon.ico">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Bootstrap 5.3 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <style>
         :root {

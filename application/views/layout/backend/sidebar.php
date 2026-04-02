@@ -20,6 +20,12 @@
                 <?php endif; ?>
             </a>
         </li>
+        <li class="sidebar-nav-item">
+            <a href="<?php echo $base_url ?? ''; ?>admin/profile" class="sidebar-nav-link <?php echo ($currentPage == 'profile') ? 'active' : ''; ?>">
+                <i data-lucide="info"></i>
+                <span>Profil Sekolah</span>
+            </a>
+        </li>
         <li class="sidebar-nav-item mt-4">
             <small class="text-uppercase text-muted fw-bold px-3" style="font-size: 0.65rem; letter-spacing: 0.1em;">Manajemen Konten</small>
         </li>

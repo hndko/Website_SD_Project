@@ -1,6 +1,11 @@
 <?php
+// application/views/frontend/profil.php
 $pageTitle = "Profil";
 $currentPage = "profil";
+
+$conn = connectDB();
+$profile = $conn->query("SELECT * FROM `school_profile` WHERE `id` = 1")->fetch_assoc();
+
 include 'application/views/layout/frontend/header.php';
 include 'application/views/layout/frontend/navbar.php';
 ?>
@@ -22,17 +27,18 @@ include 'application/views/layout/frontend/navbar.php';
             </div>
             <div class="col-lg-6">
                 <h2 class="fw-bold mb-4">Sejarah Berdiri</h2>
-                <p class="text-muted lead mb-4">SD Cendekia didirikan pada tahun 2010 dengan misi mulia untuk menyediakan akses pendidikan berkualitas yang dapat dijangkau oleh semua lapisan masyarakat, namun tetap mempertahankan standar internasional.</p>
-                <p class="text-muted mb-5">Dimulai dengan hanya beberapa ruang kelas, kini kami telah berkembang menjadi salah satu sekolah dasar terkemuka yang dipercaya oleh ratusan orang tua di wilayah sekitar untuk menitipkan buah hati mereka dalam menggapai cita-cita.</p>
-                <div class="row g-4 d-none d-md-flex">
+                <div class="text-muted lead mb-4" style="white-space: pre-line;">
+                    <?php echo htmlspecialchars($profile['history_content']); ?>
+                </div>
+                <div class="row g-4 d-none d-md-flex mt-4">
                     <div class="col-6">
-                        <div class="p-4 bg-primary bg-opacity-10 rounded-4">
+                        <div class="p-4 bg-primary bg-opacity-10 rounded-4 shadow-sm">
                             <h3 class="fw-bold text-primary mb-0">1,200+</h3>
                             <p class="small text-primary mb-0">Alumni Berprestasi</p>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="p-4 bg-primary bg-opacity-10 rounded-4">
+                        <div class="p-4 bg-primary bg-opacity-10 rounded-4 shadow-sm">
                             <h3 class="fw-bold text-primary mb-0">45+</h3>
                             <p class="small text-primary mb-0">Guru Berpengalaman</p>
                         </div>
@@ -55,23 +61,24 @@ include 'application/views/layout/frontend/navbar.php';
             <div class="col-lg-7">
                 <div class="card-modern bg-white text-dark p-5 rounded-4 shadow-lg mb-4">
                     <h4 class="fw-bold text-primary mb-3">Visi</h4>
-                    <p class="lead mb-0">"Menjadi pusat pendidikan dasar unggulan yang melahirkan generasi cerdas, berkarakter mulia, dan kompetitif di era global berbasis nilai-nilai kearifan lokal."</p>
+                    <p class="lead mb-0 italic">"<?php echo htmlspecialchars($profile['vision']); ?>"</p>
                 </div>
                 <div class="card-modern bg-white text-dark p-5 rounded-4 shadow-lg">
                     <h4 class="fw-bold text-primary mb-3">Misi</h4>
                     <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
-                        <li class="d-flex align-items-baseline gap-3">
-                            <i data-lucide="check" class="text-primary" size="20"></i>
-                            <span>Menyelenggarakan proses pembelajaran yang inovatif, kreatif, dan berbasis teknologi informasi.</span>
+                        <?php 
+                        $missions = explode("\n", $profile['mission']);
+                        foreach($missions as $mission):
+                            if(trim($mission)):
+                        ?>
+                        <li class="d-flex align-items-baseline gap-3 text-start">
+                            <i data-lucide="check" class="text-primary flex-shrink-0" size="20"></i>
+                            <span class="fw-medium"><?php echo htmlspecialchars(trim($mission)); ?></span>
                         </li>
-                        <li class="d-flex align-items-baseline gap-3">
-                            <i data-lucide="check" class="text-primary" size="20"></i>
-                            <span>Membina akhlak mulia dan karakter siswa melalui program bimbingan spiritual serta disiplin positif.</span>
-                        </li>
-                        <li class="d-flex align-items-baseline gap-3">
-                            <i data-lucide="check" class="text-primary" size="20"></i>
-                            <span>Menjalin kemitraan yang harmonis antara sekolah, orang tua, dan masyarakat luas.</span>
-                        </li>
+                        <?php 
+                            endif;
+                        endforeach; 
+                        ?>
                     </ul>
                 </div>
             </div>
