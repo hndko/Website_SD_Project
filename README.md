@@ -39,8 +39,8 @@ Gunakan salah satu deskripsi singkat berikut di bagian **About** repository:
 
 ## Persyaratan
 
-- PHP 8.x
-- MySQL 8.x
+- PHP 7.x
+- MySQL 5.x
 - Web server lokal (Laragon/XAMPP/WAMP)
 
 ## Cara Menjalankan (Local)
