@@ -30,13 +30,7 @@
             <small class="text-uppercase text-muted fw-bold px-3" style="font-size: 0.65rem; letter-spacing: 0.1em;">Manajemen Konten</small>
         </li>
         <li class="sidebar-nav-item">
-            <a href="<?php echo $base_url ?? ''; ?>profil" class="sidebar-nav-link">
-                <i data-lucide="user-plus"></i>
-                <span>Profil Sekolah</span>
-            </a>
-        </li>
-        <li class="sidebar-nav-item">
-            <a href="<?php echo $base_url ?? ''; ?>galeri" class="sidebar-nav-link">
+            <a href="<?php echo $base_url ?? ''; ?>gallery" class="sidebar-nav-link <?php echo ($currentPage == 'gallery') ? 'active' : ''; ?>">
                 <i data-lucide="image"></i>
                 <span>Galeri & Media</span>
             </a>

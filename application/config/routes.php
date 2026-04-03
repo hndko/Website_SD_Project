@@ -17,6 +17,7 @@ $routes = [
     'dashboard' => 'backend/dashboard/index.php',
     'messages' => 'backend/messages/index.php',
     'profile' => 'backend/profile/index.php',
+    'gallery' => 'backend/gallery/index.php',
 
     // Controllers / Actions
     'contact/submit' => 'controllers/Contact.php',
