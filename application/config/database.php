@@ -1,5 +1,9 @@
 <?php
-// config.php
+/**
+ * Database Configuration and Connection Wrapper
+ */
+
+// Database Credentials
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');

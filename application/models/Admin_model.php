@@ -12,7 +12,7 @@ class Admin_model
 
     public function authenticate($username, $password)
     {
-        $stmt = $this->conn->prepare("SELECT `id`, password FROM `admin_users` WHERE `username` = ?");
+        $stmt = $this->conn->prepare("SELECT `id`, password FROM `" . TABLE_ADMIN . "` WHERE `username` = ?");
         $stmt->bind_param("s", $username);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -27,7 +27,7 @@ class Admin_model
 
     public function get_by_id($id)
     {
-        $stmt = $this->conn->prepare("SELECT * FROM `admin_users` WHERE `id` = ?");
+        $stmt = $this->conn->prepare("SELECT * FROM `" . TABLE_ADMIN . "` WHERE `id` = ?");
         $stmt->bind_param("i", $id);
         $stmt->execute();
         return $stmt->get_result()->fetch_assoc();

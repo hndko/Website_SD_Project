@@ -12,7 +12,7 @@ class Profile_model
 
     public function get_profile()
     {
-        return $this->conn->query("SELECT * FROM `school_profile` WHERE `id` = 1")->fetch_assoc();
+        return $this->conn->query("SELECT * FROM `" . TABLE_PROFILE . "` WHERE `id` = 1")->fetch_assoc();
     }
 
     public function update_profile($history, $vision, $mission)
@@ -21,7 +21,7 @@ class Profile_model
         $vision = $this->conn->real_escape_string($vision);
         $mission = $this->conn->real_escape_string($mission);
 
-        $sql = "UPDATE `school_profile` SET
+        $sql = "UPDATE `" . TABLE_PROFILE . "` SET
                 `history_content` = '$history',
                 `vision` = '$vision',
                 `mission` = '$mission'
