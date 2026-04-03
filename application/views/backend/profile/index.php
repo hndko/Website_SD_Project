@@ -6,32 +6,25 @@ $dashboardTitle = "Edit Profil Sekolah";
 $breadcrumbActive = "Profil";
 
 checkAdminLogin();
-$conn = connectDB();
 
 $message = "";
 $error = "";
 
-// Handle Form Submission
+// Handle Form Submission via models
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $history = $conn->real_escape_string($_POST['history_content']);
-    $vision = $conn->real_escape_string($_POST['vision']);
-    $mission = $conn->real_escape_string($_POST['mission']);
+    $history = $_POST['history_content'];
+    $vision = $_POST['vision'];
+    $mission = $_POST['mission'];
 
-    $updateSql = "UPDATE `school_profile` SET 
-                  `history_content` = '$history', 
-                  `vision` = '$vision', 
-                  `mission` = '$mission' 
-                  WHERE `id` = 1";
-
-    if ($conn->query($updateSql) === TRUE) {
+    if ($Profile_model->update_profile($history, $vision, $mission)) {
         $message = "Profil sekolah berhasil diperbarui!";
     } else {
-        $error = "Gagal memperbarui profil: " . $conn->error;
+        $error = "Gagal memperbarui profil sekolah.";
     }
 }
 
-// Fetch current data
-$profile = $conn->query("SELECT * FROM `school_profile` WHERE `id` = 1")->fetch_assoc();
+// Fetch current data via model
+$profile = $Profile_model->get_profile();
 
 include 'application/views/layout/backend/header.php';
 include 'application/views/layout/backend/sidebar.php';

@@ -22,6 +22,18 @@ if ($base_path !== '/' && strpos($path, $base_path) === 0) {
 
 $path = trim($path, '/');
 
+// Initialize Database connection for models
+$conn = connectDB();
+
+// Load Models
+require_once 'application/models/Admin_model.php';
+require_once 'application/models/Message_model.php';
+require_once 'application/models/Profile_model.php';
+
+$Admin_model = new Admin_model($conn);
+$Message_model = new Message_model($conn);
+$Profile_model = new Profile_model($conn);
+
 // Route matching
 if (array_key_exists($path, $routes)) {
     $view = $routes[$path];

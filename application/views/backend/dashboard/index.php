@@ -1,19 +1,19 @@
 <?php
 // application/views/backend/dashboard.php
+checkAdminLogin();
+
 $pageTitle = "Dashboard Admin";
 $currentPage = "dashboard";
 $dashboardTitle = "Ringkasan Dashboard";
 $breadcrumbActive = "Dashboard";
 
-$conn = connectDB();
-
-// Statistics
-$unreadCount = $conn->query("SELECT COUNT(*) as total FROM `messages` WHERE `status` = 'unread'")->fetch_assoc()['total'];
-$totalCount = $conn->query("SELECT COUNT(*) as total FROM `messages`")->fetch_assoc()['total'];
+// Statistics via models
+$unreadCount = $Message_model->get_unread_count();
+$totalCount = $Message_model->get_total_count();
 $readCount = $totalCount - $unreadCount;
 
-// Recent Messages
-$recentMessages = $conn->query("SELECT * FROM `messages` ORDER BY `created_at` DESC LIMIT 5");
+// Recent Messages via models
+$recentMessages = $Message_model->get_recent(5);
 
 include 'application/views/layout/backend/header.php';
 include 'application/views/layout/backend/sidebar.php';
@@ -54,7 +54,7 @@ include 'application/views/layout/backend/sidebar.php';
             <div class="table-custom-wrapper">
                 <div class="d-flex justify-content-between align-items-center p-4 border-bottom">
                     <h5 class="fw-bold mb-0">Pesan Terbaru</h5>
-                    <a href="<?php echo $base_url; ?>admin/messages" class="btn btn-primary btn-sm px-3 rounded-pill fw-medium">Lihat Semua</a>
+                    <a href="<?php echo $base_url; ?>messages" class="btn btn-primary btn-sm px-3 rounded-pill fw-medium">Lihat Semua</a>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-custom">
@@ -88,7 +88,7 @@ include 'application/views/layout/backend/sidebar.php';
                                     <?php endif; ?>
                                 </td>
                                 <td class="text-end">
-                                    <a href="<?php echo $base_url; ?>admin/messages?action=read&id=<?php echo $msg['id']; ?>" class="btn btn-light btn-sm rounded-circle p-2" title="Tandai Selesai">
+                                    <a href="<?php echo $base_url; ?>messages?action=read&id=<?php echo $msg['id']; ?>" class="btn btn-light btn-sm rounded-circle p-2" title="Tandai Selesai">
                                         <i data-lucide="check" size="16"></i>
                                     </a>
                                 </td>

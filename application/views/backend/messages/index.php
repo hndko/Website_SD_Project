@@ -6,24 +6,24 @@ $dashboardTitle = "Daftar Pesan Masuk";
 $breadcrumbActive = "Pesan";
 
 checkAdminLogin();
-$conn = connectDB();
 
-// Handle Mark as Read or Delete
+// Handle Mark as Read or Delete via models
 if (isset($_GET['action'])) {
     $id = (int)$_GET['id'];
     if ($_GET['action'] == 'read') {
-        $conn->query("UPDATE `messages` SET `status` = 'read' WHERE `id` = $id");
+        $Message_model->mark_as_read($id);
     } elseif ($_GET['action'] == 'delete') {
-        $conn->query("DELETE FROM `messages` WHERE `id` = $id");
+        $Message_model->delete($id);
     }
-    header("Location: " . $base_url . "admin/messages");
+    header("Location: " . $base_url . "messages");
     exit();
 }
 
 // Unread Count for sidebar
-$unreadCount = $conn->query("SELECT COUNT(*) as total FROM `messages` WHERE `status` = 'unread'")->fetch_assoc()['total'];
+$unreadCount = $Message_model->get_unread_count();
 
-$result = $conn->query("SELECT * FROM `messages` ORDER BY `created_at` DESC");
+// Get all messages
+$result = $Message_model->get_all();
 
 include 'application/views/layout/backend/header.php';
 include 'application/views/layout/backend/sidebar.php';
@@ -70,11 +70,11 @@ include 'application/views/layout/backend/sidebar.php';
                             <td class="text-end">
                                 <div class="d-flex gap-2 justify-content-end">
                                     <?php if ($row['status'] == 'unread'): ?>
-                                        <a href="<?php echo $base_url; ?>admin/messages?action=read&id=<?php echo $row['id']; ?>" class="btn btn-outline-primary btn-sm rounded-circle p-2" title="Tandai Selesai">
+                                        <a href="<?php echo $base_url; ?>messages?action=read&id=<?php echo $row['id']; ?>" class="btn btn-outline-primary btn-sm rounded-circle p-2" title="Tandai Selesai">
                                             <i data-lucide="check" size="18"></i>
                                         </a>
                                     <?php endif; ?>
-                                    <a href="<?php echo $base_url; ?>admin/messages?action=delete&id=<?php echo $row['id']; ?>" class="btn btn-outline-danger btn-sm rounded-circle p-2" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus pesan ini?')">
+                                    <a href="<?php echo $base_url; ?>messages?action=delete&id=<?php echo $row['id']; ?>" class="btn btn-outline-danger btn-sm rounded-circle p-2" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus pesan ini?')">
                                         <i data-lucide="trash-2" size="18"></i>
                                     </a>
                                 </div>

@@ -3,8 +3,8 @@
 $pageTitle = "Profil";
 $currentPage = "profil";
 
-$conn = connectDB();
-$profile = $conn->query("SELECT * FROM `school_profile` WHERE `id` = 1")->fetch_assoc();
+// Fetch current data via model
+$profile = $Profile_model->get_profile();
 
 include 'application/views/layout/frontend/header.php';
 include 'application/views/layout/frontend/navbar.php';

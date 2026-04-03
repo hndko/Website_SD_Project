@@ -6,20 +6,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $conn = connectDB();
-    $stmt = $conn->prepare("SELECT `id`, password FROM `admin_users` WHERE `username` = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $admin_id = $Admin_model->authenticate($username, $password);
 
-    if ($row = $result->fetch_assoc()) {
-        if (password_verify($password, $row['password'])) {
-            $_SESSION['admin_id'] = $row['id'];
-            header("Location: " . ($base_url ?? '') . "admin");
-            exit();
-        }
+    if ($admin_id) {
+        $_SESSION['admin_id'] = $admin_id;
+        header("Location: " . ($base_url ?? '') . "dashboard");
+        exit();
+    } else {
+        $error = "Username atau password salah!";
     }
-    $error = "Username atau password salah!";
 }
 ?>
 <!DOCTYPE html>

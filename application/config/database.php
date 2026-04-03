@@ -26,10 +26,11 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 // Cek login admin
-function checkAdminLogin($redirectPath = "../auth/login.php")
+function checkAdminLogin()
 {
+    global $base_url;
     if (!isset($_SESSION['admin_id'])) {
-        header("Location: $redirectPath");
+        header("Location: " . ($base_url ?? '') . "login");
         exit();
     }
 }
