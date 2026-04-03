@@ -4,7 +4,7 @@
         <div class="row g-4">
             <div class="col-lg-4">
                 <div class="d-flex align-items-center mb-3">
-                    <img src="assets/img/logo.png" alt="SD Cendekia Logo" class="me-2" height="40">
+                    <img src="<?php echo $base_url ?? ''; ?>assets/img/brand/logo.png" alt="SD Cendekia Logo" class="me-2" height="40">
                     <h5 class="mb-0 fw-bold">SD Cendekia</h5>
                 </div>
                 <p class="text-secondary small">Membentuk generasi cerdas, kreatif, dan berakhlak mulia melalui pendidikan berkualitas dan lingkungan belajar yang inspiratif.</p>

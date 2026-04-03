@@ -1,6 +1,6 @@
 <aside class="admin-sidebar">
     <div class="d-flex align-items-center gap-3 mb-4 px-2">
-        <img src="<?php echo $base_url ?? ''; ?>assets/img/logo.png" alt="Logo" height="40">
+        <img src="<?php echo $base_url ?? ''; ?>assets/img/brand/logo.png" alt="Logo" height="40">
         <h5 class="mb-0 fw-bold text-white">SD Cendekia</h5>
     </div>
 

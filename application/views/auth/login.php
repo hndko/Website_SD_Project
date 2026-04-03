@@ -164,7 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="login-card">
         <div class="brand-logo">
-            <img src="<?php echo $base_url ?? ''; ?>assets/img/logo.png" alt="SD Cendekia Logo">
+            <img src="<?php echo $base_url ?? ''; ?>assets/img/brand/logo.png" alt="SD Cendekia Logo">
             <h4>Admin Login</h4>
             <p>Akses Panel Administrasi SD Cendekia</p>
         </div>

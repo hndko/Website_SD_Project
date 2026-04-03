@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom py-3">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="<?php echo $base_url ?? ''; ?>">
-            <img src="<?php echo $base_url ?? ''; ?>assets/img/logo.png" alt="SD Cendekia Logo" class="me-2">
+            <img src="<?php echo $base_url ?? ''; ?>assets/img/brand/logo.png" alt="SD Cendekia Logo" class="me-2">
             <span class="fw-bold text-dark fs-5">SD Cendekia</span>
         </a>
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
