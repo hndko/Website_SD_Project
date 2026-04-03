@@ -6,6 +6,7 @@
 // Load Configuration and Constants
 require_once 'application/config/config.php';
 require_once 'application/config/constanta.php';
+require_once 'application/config/session.php';
 require_once 'application/config/database.php';
 require_once 'application/config/routes.php';
 

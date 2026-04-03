@@ -24,11 +24,6 @@ function connectDB()
     return $conn;
 }
 
-// Start session if not already started
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
 // Cek login admin
 function checkAdminLogin()
 {
